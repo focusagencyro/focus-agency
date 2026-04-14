@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FocusPageController::class, 'home'])->name('home');
 Route::get('/sitemap-preview', [FocusPageController::class, 'sitemap'])->name('sitemap.preview');
+Route::get('/health', fn () => 'ok');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
