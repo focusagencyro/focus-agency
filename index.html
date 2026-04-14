@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Agency — Echipa ta de online</title>
+  <meta name="description" content="Focus Agency este echipa ta de online. Social media management, publicitate digitală și dezvoltare web. București & Canada." />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#D4FF00',
+            dark: '#0A0A0A',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0A0A0A] text-white overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 z-10">
+        <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7" fill="#0A0A0A"/>
+            <circle cx="8" cy="8" r="3" fill="#0A0A0A"/>
+            <path d="M8 1v14M1 8h14" stroke="#0A0A0A" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <span class="font-black text-lg tracking-tight text-white">FOCUS<span class="text-accent">.</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="nav-links flex items-center gap-8">
+        <a href="index.html" class="nav-link active">Acasă</a>
+        <a href="servicii.html" class="nav-link">Servicii</a>
+        <a href="tarife.html" class="nav-link">Tarife</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="btn-primary hidden md:inline-flex">
+          Hai să vorbim
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="hamburger-btn hamburger md:hidden">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav">
+    <button class="mobile-close absolute top-6 right-6 text-white opacity-60 hover:opacity-100 transition-opacity">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 6l16 16M22 6L6 22" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html">Acasă</a>
+    <a href="servicii.html">Servicii</a>
+    <a href="tarife.html">Tarife</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn-primary mt-4">Hai să vorbim</a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
+    <!-- Background orbs -->
+    <div class="orb orb-accent w-[600px] h-[600px] -top-48 -right-48 opacity-70"></div>
+    <div class="orb orb-blue w-[400px] h-[400px] bottom-0 -left-32"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left content -->
+        <div>
+          <div class="hero-badge animate-fade-up">
+            <div class="w-2 h-2 bg-accent rounded-full"></div>
+            Digital Marketing Agency · București & Canada
+          </div>
+
+          <h1 class="hero-title animate-fade-up animate-delay-1 mb-6">
+            Echipa ta<br/>
+            <span class="accent">de online</span><br/>
+            e aici.
+          </h1>
+
+          <p class="text-[rgba(255,255,255,0.55)] text-lg leading-relaxed max-w-lg animate-fade-up animate-delay-2 mb-10">
+            Aducem afacerea ta în online, generăm lead-uri și creștem vânzările.
+            Social media, publicitate digitală și web development — toate sub un singur acoperiș.
+          </p>
+
+          <div class="flex flex-wrap gap-4 animate-fade-up animate-delay-3 mb-16">
+            <a href="contact.html" class="btn-primary">
+              Începem împreună
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="servicii.html" class="btn-secondary">Descoperă serviciile</a>
+          </div>
+
+          <!-- Mini stats row -->
+          <div class="flex gap-10 animate-fade-up animate-delay-4">
+            <div>
+              <div class="text-3xl font-black text-accent tracking-tight">
+                <span data-target="50" data-suffix="+">50+</span>
+              </div>
+              <div class="text-xs font-medium text-[rgba(255,255,255,0.4)] uppercase tracking-widest mt-1">Clienți activi</div>
+            </div>
+            <div class="w-px bg-[rgba(255,255,255,0.08)]"></div>
+            <div>
+              <div class="text-3xl font-black text-accent tracking-tight">
+                <span data-target="5" data-suffix="ani">5ani</span>
+              </div>
+              <div class="text-xs font-medium text-[rgba(255,255,255,0.4)] uppercase tracking-widest mt-1">Experiență</div>
+            </div>
+            <div class="w-px bg-[rgba(255,255,255,0.08)]"></div>
+            <div>
+              <div class="text-3xl font-black text-accent tracking-tight">2</div>
+              <div class="text-xs font-medium text-[rgba(255,255,255,0.4)] uppercase tracking-widest mt-1">Birouri</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right visual -->
+        <div class="relative animate-fade-up animate-delay-2">
+          <div class="w-full aspect-[4/3] rounded-2xl min-h-[400px] overflow-hidden border border-[rgba(255,255,255,0.08)]">
+            <img
+              src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1600&q=80"
+              alt="Focus Agency team collaborating on digital strategy"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Floating card -->
+          <div class="absolute -bottom-6 -left-6 bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-2xl p-4 flex items-center gap-3 shadow-2xl">
+            <div class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l1.5 4.5H15l-3.75 2.75 1.5 4.5L9 11l-3.75 2.75 1.5-4.5L3 6.5h4.5L9 2z" fill="#0A0A0A"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-[rgba(255,255,255,0.4)] font-medium">Rezultate dovedite</div>
+              <div class="text-sm font-bold text-white">ROI mediu 3x</div>
+            </div>
+          </div>
+
+          <!-- Second floating card -->
+          <div class="absolute -top-6 -right-4 bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-2xl p-4 shadow-2xl">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span class="text-xs text-[rgba(255,255,255,0.4)] font-medium">Live acum</span>
+            </div>
+            <div class="text-2xl font-black text-accent tracking-tight">↑ 247%</div>
+            <div class="text-xs text-[rgba(255,255,255,0.4)] mt-1">reach organic</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TICKER
+  ══════════════════════════════════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      <!-- Repeat items for seamless loop -->
+      <span class="ticker-item"><span class="ticker-dot"></span>Social Media Management</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Facebook & Instagram Ads</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Web Development</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Email Marketing</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>SMS Marketing</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Strategie Digitală</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Raportare Lunară</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>București & Canada</span>
+      <!-- Duplicate for loop -->
+      <span class="ticker-item"><span class="ticker-dot"></span>Social Media Management</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Facebook & Instagram Ads</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Web Development</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Email Marketing</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>SMS Marketing</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Strategie Digitală</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>Raportare Lunară</span>
+      <span class="ticker-item"><span class="ticker-dot"></span>București & Canada</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SERVICES PREVIEW
+  ══════════════════════════════════════ -->
+  <section class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div class="reveal">
+          <div class="section-label">Ce facem</div>
+          <h2 class="section-heading">Servicii care<br/><span>livrează rezultate</span></h2>
+        </div>
+        <a href="servicii.html" class="btn-ghost reveal">
+          Toate serviciile
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 9h16M9 1l8 8-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <!-- Card 1 -->
+        <div class="card service-card reveal">
+          <span class="number">01</span>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="14" rx="3" stroke="#D4FF00" stroke-width="1.5"/><path d="M8 6V4a4 4 0 018 0v2" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="13" r="2" fill="#D4FF00"/></svg>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&q=80"
+            alt="Social media management dashboard"
+            class="w-full h-44 object-cover rounded-xl mb-4 border border-[rgba(255,255,255,0.08)]"
+            loading="lazy"
+          />
+          <div class="tag mb-3">de la €163/lună</div>
+          <h3 class="text-xl font-bold text-white mb-3">Social Media<br/>Management</h3>
+          <p class="text-[rgba(255,255,255,0.5)] text-sm leading-relaxed mb-6">
+            Gestionăm prezența ta pe Facebook și Instagram. Conținut, engagement, raportare lunară — noi ne ocupăm de tot.
+          </p>
+          <a href="servicii.html#social-media" class="btn-ghost text-sm">
+            Află mai mult
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Card 2 — featured -->
+        <div class="card service-card reveal animate-delay-1" style="background: linear-gradient(135deg, #1A1A1A 0%, #111111 100%); border-color: rgba(212,255,0,0.2);">
+          <span class="number">02</span>
+          <div class="service-icon" style="background: rgba(212,255,0,0.15);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round"/><path d="M16 2.5C16 2.5 19 5 19.5 8" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round"/><path d="M8 8l4 4 8-8" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=1200&q=80"
+            alt="Digital advertising analytics and campaign performance"
+            class="w-full h-44 object-cover rounded-xl mb-4 border border-[rgba(212,255,0,0.22)]"
+            loading="lazy"
+          />
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="tag">de la €163/lună</span>
+            <span class="bg-accent text-dark text-xs font-bold px-2 py-0.5 rounded-full">Popular</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Social Media<br/>Advertising</h3>
+          <p class="text-[rgba(255,255,255,0.5)] text-sm leading-relaxed mb-6">
+            Campanii Facebook Ads și Instagram Ads optimizate pentru conversii. Bring emotion to your product și clienți noi lunar.
+          </p>
+          <a href="servicii.html#advertising" class="btn-ghost text-sm">
+            Află mai mult
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card service-card reveal animate-delay-2">
+          <span class="number">03</span>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#D4FF00" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round"/><path d="M6 10l3 3 6-6" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80"
+            alt="Web design wireframes and responsive interface"
+            class="w-full h-44 object-cover rounded-xl mb-4 border border-[rgba(255,255,255,0.08)]"
+            loading="lazy"
+          />
+          <div class="tag mb-3">de la €497/lună</div>
+          <h3 class="text-xl font-bold text-white mb-3">Web<br/>Development</h3>
+          <p class="text-[rgba(255,255,255,0.5)] text-sm leading-relaxed mb-6">
+            Site-uri responsive, cu panou de control, design unic și conexiune securizată. Email personalizat inclus.
+          </p>
+          <a href="servicii.html#web" class="btn-ghost text-sm">
+            Află mai mult
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       STATS SECTION
+  ══════════════════════════════════════ -->
+  <section class="py-20 px-6 border-y border-[rgba(255,255,255,0.06)]">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="stat-number" data-target="50" data-suffix="+">50+</div>
+          <div class="text-sm text-[rgba(255,255,255,0.4)] mt-2 font-medium">Clienți mulțumiți</div>
+        </div>
+        <div class="text-center reveal animate-delay-1">
+          <div class="stat-number" data-target="300" data-suffix="+">300+</div>
+          <div class="text-sm text-[rgba(255,255,255,0.4)] mt-2 font-medium">Campanii rulate</div>
+        </div>
+        <div class="text-center reveal animate-delay-2">
+          <div class="stat-number" data-target="5" data-suffix="ani">5ani</div>
+          <div class="text-sm text-[rgba(255,255,255,0.4)] mt-2 font-medium">Experiență în piață</div>
+        </div>
+        <div class="text-center reveal animate-delay-3">
+          <div class="stat-number" data-target="2">2</div>
+          <div class="text-sm text-[rgba(255,255,255,0.4)] mt-2 font-medium">Birouri RO & CA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHY US
+  ══════════════════════════════════════ -->
+  <section class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+        <!-- Visual side -->
+        <div class="order-2 lg:order-1 reveal">
+          <div class="w-full aspect-square rounded-2xl min-h-[460px] overflow-hidden border border-[rgba(255,255,255,0.08)]">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
+              alt="Focus Agency team portrait"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Content side -->
+        <div class="order-1 lg:order-2">
+          <div class="section-label reveal">De ce Focus Agency</div>
+          <h2 class="section-heading reveal mb-6">Suntem mai mult<br/>decât o <span>agenție</span></h2>
+          <p class="text-[rgba(255,255,255,0.5)] leading-relaxed mb-10 reveal">
+            Nu suntem o agenție care setează campanii și dispare. Suntem partenerii tăi de creștere —
+            implicați, transparenți și orientați spre rezultate. Fiecare euro investit trebuie să se întoarcă înmulțit.
+          </p>
+
+          <div class="space-y-5">
+            <!-- Feature items -->
+            <div class="flex gap-4 items-start reveal">
+              <div class="w-10 h-10 bg-[rgba(212,255,0,0.1)] rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-white mb-1">Suport dedicat</div>
+                <div class="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">Ai un om dedicat afacerii tale, nu un ticketing system anonim.</div>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start reveal animate-delay-1">
+              <div class="w-10 h-10 bg-[rgba(212,255,0,0.1)] rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-white mb-1">Design unic, 100%</div>
+                <div class="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">Nu există template-uri. Totul este creat special pentru brandul tău.</div>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start reveal animate-delay-2">
+              <div class="w-10 h-10 bg-[rgba(212,255,0,0.1)] rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-white mb-1">Raportare lunară transparentă</div>
+                <div class="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">Știi exact ce s-a întâmplat, ce a funcționat și ce urmează.</div>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start reveal animate-delay-3">
+              <div class="w-10 h-10 bg-[rgba(212,255,0,0.1)] rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-white mb-1">Responsive & rapid</div>
+                <div class="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">Site-urile noastre sunt optimizate pentru viteză și funcționează perfect pe orice dispozitiv.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIAL / QUOTE
+  ══════════════════════════════════════ -->
+  <section class="py-20 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="text-7xl text-accent leading-none font-black mb-6 opacity-30">"</div>
+      <blockquote class="text-2xl md:text-3xl font-light text-[rgba(255,255,255,0.75)] leading-relaxed tracking-tight reveal" style="font-family: 'DM Sans', sans-serif;">
+        Bring Emotion To Your Product. Aducem afacerea ta în online și o facem
+        să rezoneze cu publicul care contează.
+      </blockquote>
+      <div class="mt-8 flex items-center justify-center gap-3 reveal">
+        <img
+          src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=240&q=80"
+          alt="Client portrait"
+          class="w-10 h-10 rounded-full object-cover border border-[rgba(255,255,255,0.15)]"
+          loading="lazy"
+        />
+        <div class="text-left">
+          <div class="text-sm font-bold text-white">Echipa Focus Agency</div>
+          <div class="text-xs text-[rgba(255,255,255,0.4)]">focusagency.ro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRE-FOOTER + FOOTER ══ -->
+  <section class="prefooter">
+    <div class="max-w-7xl mx-auto px-6 prefooter-inner">
+      <div>
+        <p class="prefooter-eyebrow">Pasul următor</p>
+        <h2 class="prefooter-headline">Hai să creștem<br/><em>împreună.</em></h2>
+      </div>
+      <div class="prefooter-actions">
+        <a href="contact.html" class="btn-primary">
+          Începe un proiect
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="tarife.html" class="prefooter-link">
+          Vezi tarifele
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="footer-grid">
+
+        <!-- Brand block -->
+        <div>
+          <a href="index.html" class="footer-logo-link">
+            <div class="footer-logo-icon">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" fill="#0A111A"/><circle cx="7" cy="7" r="2" fill="#D7FF1F" opacity="0.8"/></svg>
+            </div>
+            <span class="footer-logo-text">FOCUS<em>.</em></span>
+          </a>
+          <p class="footer-desc">Echipa ta de online. Creștem afaceri prin social media management, publicitate digitală și web development.</p>
+          <div class="footer-offices">
+            <div class="office-pill">🇷🇴 București, România</div>
+            <div class="office-pill">🇨🇦 Ontario, Canada</div>
+          </div>
+          <div class="footer-social-row">
+            <a href="#" class="f-social" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="f-social" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="f-social" aria-label="TikTok">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="f-social" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" opacity="0.7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav group -->
+        <div class="footer-nav-group">
+          <div>
+            <h4 class="footer-col-title">Pagini</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html" class="footer-link">Acasă</a></li>
+              <li><a href="servicii.html" class="footer-link">Servicii</a></li>
+              <li><a href="tarife.html" class="footer-link">Tarife</a></li>
+              <li><a href="blog.html" class="footer-link">Blog</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Servicii</h4>
+            <ul class="footer-nav-list">
+              <li><a href="servicii.html#social-media" class="footer-link">Social Media Management</a></li>
+              <li><a href="servicii.html#advertising" class="footer-link">Social Media Advertising</a></li>
+              <li><a href="servicii.html#web" class="footer-link">Web Development</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact chips -->
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">Contactează-ne</h4>
+          <div class="footer-contact-chips">
+            <a href="mailto:contact@focusagency.ro" class="f-contact-chip">
+              <span class="chip-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="4" width="13" height="9" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 5.5l6.5 4.5 6.5-4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="chip-label">Email</span>
+                <span class="chip-value">contact@focusagency.ro</span>
+              </span>
+            </a>
+            <a href="tel:+40747348891" class="f-contact-chip">
+              <span class="chip-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 3a1 1 0 011-1H5l1 2.5L4.5 5.5C5.4 7.1 6.9 8.6 8.5 9.5L10 8l2.5 1v1.5a1 1 0 01-1 1 10 10 0 01-9-9z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="chip-label">Telefon</span>
+                <span class="chip-value">+40 747 348 891</span>
+              </span>
+            </a>
+            <a href="contact.html" class="f-contact-chip f-contact-chip--accent">
+              <span class="chip-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 2l6 6-6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="chip-label">Formular</span>
+                <span class="chip-value">Trimite un mesaj</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <span class="footer-copyright">© 2026 Focus Agency</span>
+        </div>
+        <div class="footer-legal">
+          <a href="#" class="footer-link">Termeni</a>
+          <a href="#" class="footer-link">Confidențialitate</a>
+          <a href="#" class="footer-link">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-watermark" aria-hidden="true">FOCUS</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
