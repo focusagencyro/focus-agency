@@ -38,62 +38,82 @@ class FocusPageController extends Controller
 
     private function renderPath(string $path): View
     {
-        $normalizedPath = $this->normalizePath($path);
-        $data = $this->loadContentData();
+        try {
+            $normalizedPath = $this->normalizePath($path);
+            $data = $this->loadContentData();
 
-        $page = $data['pages']->firstWhere('path', $normalizedPath);
+            $page = $data['pages']->firstWhere('path', $normalizedPath);
 
-        if ($page === null) {
-            abort(404);
-        }
+            if ($page === null) {
+                abort(404);
+            }
 
-        $related = $data['pages']
-            ->filter(fn (array $entry) => $entry['path'] !== $normalizedPath)
-            ->take(6)
-            ->values();
+            $related = $data['pages']
+                ->filter(fn (array $entry) => $entry['path'] !== $normalizedPath)
+                ->take(6)
+                ->values();
 
-        $primaryNavigation = $data['pages']
-            ->filter(function (array $entry): bool {
-                $path = $entry['path'];
-                if ($path === '/') {
-                    return false;
-                }
-
-                if (substr_count(trim($path, '/'), '/') > 0) {
-                    return false;
-                }
-
-                foreach (['category', 'tag', 'product', 'portfolio', 'team-member', 'booking-confirmation'] as $segment) {
-                    if (str_contains($path, '/'.$segment)) {
+            $primaryNavigation = $data['pages']
+                ->filter(function (array $entry): bool {
+                    $path = $entry['path'];
+                    if ($path === '/') {
                         return false;
                     }
-                }
 
-                return true;
-            })
-            ->take(8)
-            ->values();
+                    if (substr_count(trim($path, '/'), '/') > 0) {
+                        return false;
+                    }
 
-        return view('focus.page', [
-            'page' => $page,
-            'relatedPages' => $related,
-            'primaryNavigation' => $primaryNavigation,
-            'generatedAt' => $data['generated_at'],
-            'pageCount' => $data['page_count'],
-        ]);
+                    foreach (['category', 'tag', 'product', 'portfolio', 'team-member', 'booking-confirmation'] as $segment) {
+                        if (str_contains($path, '/'.$segment)) {
+                            return false;
+                        }
+                    }
+
+                    return true;
+                })
+                ->take(8)
+                ->values();
+
+            return view('focus.page', [
+                'page' => $page,
+                'relatedPages' => $related,
+                'primaryNavigation' => $primaryNavigation,
+                'generatedAt' => $data['generated_at'],
+                'pageCount' => $data['page_count'],
+            ]);
+        } catch (\Throwable $e) {
+            logger()->error('FocusPageController renderPath failed.', [
+                'path' => $path,
+                'message' => $e->getMessage(),
+                'code' => $e->getCode(),
+            ]);
+
+            throw $e;
+        }
     }
 
     private function loadContentData(): array
     {
-        $json = @file_get_contents(storage_path('app/'.self::CONTENT_FILE));
+        $contentPath = storage_path('app/'.self::CONTENT_FILE);
+        $json = @file_get_contents($contentPath);
 
         if (!is_string($json) || trim($json) === '') {
+            logger()->error('Focus content file missing or empty.', [
+                'path' => $contentPath,
+                'exists' => file_exists($contentPath),
+                'readable' => is_readable($contentPath),
+            ]);
             abort(500, 'Content import is missing. Run: php scripts/import_focus_content.php');
         }
 
         $payload = json_decode($json, true);
 
         if (!is_array($payload) || !isset($payload['pages']) || !is_array($payload['pages'])) {
+            logger()->error('Focus content file invalid.', [
+                'path' => $contentPath,
+                'json_error' => json_last_error_msg(),
+            ]);
             abort(500, 'Imported content format is invalid.');
         }
 
